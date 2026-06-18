@@ -22,11 +22,13 @@ export function Level7() {
 
       {/* Hero: 3D backdrop + animated headline + magnetic CTA */}
       <section className="relative flex h-screen items-center justify-center overflow-hidden px-6">
-        <div className="pointer-events-none absolute inset-0 opacity-60">
+        <div className="pointer-events-none absolute inset-0 opacity-45">
           <Suspense fallback={null}>
             <BlobScene />
           </Suspense>
         </div>
+        {/* Dark scrim so the headline stays legible over the blob's highlight */}
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(10,10,18,0.82),rgba(10,10,18,0.35)_55%,transparent_80%)]" />
         <div className="relative z-10 text-center">
           <span className="font-mono text-sm text-accent">Level 07</span>
           <div className="mt-4">

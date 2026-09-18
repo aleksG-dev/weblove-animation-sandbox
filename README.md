@@ -1,43 +1,46 @@
-# Weblove · Animation Sandbox
+# Weblove — React Animation Lab
 
-One repo where every quest from the course lives, organised by level.
-Home page links to each level; routes `/level1` … `/level7` are the canvas for that
-level's main quest output.
+A front-end learning project exploring web animation through seven separate routes.
+
+## What is included
+
+The current application routes to dedicated `Level1` through `Level7` components using lazy loading. These are no longer all placeholder canvases, despite the earlier README.
+
+Topics are organised around headline reveals and counters, scroll storytelling, micro-interactions, timelines, page transitions, 3D and a combined showcase.
 
 ## Stack
-React 18 · TypeScript · Vite · Tailwind · React Router · GSAP · Framer Motion · Lenis · React Three Fiber · lucide-react
+
+React 18, TypeScript, Vite, Tailwind CSS, React Router, GSAP, Framer Motion, Lenis and React Three Fiber.
 
 ## Run locally
+
+Install Node.js and npm compatible with Vite 5, then:
+
 ```bash
-npm install
-npm run dev      # http://localhost:5173
+npm ci
+npm run dev
 ```
 
-## Build
+Open the URL printed by Vite. The home page links to `/level1` through `/level7`.
+
 ```bash
 npm run build
 npm run preview
 ```
 
-## Structure
-```
-src/
-  animations/   animation hooks (useSmoothScroll)
-  components/   reusable UI (LevelCard, AnimatedHeadline, RollingNumber, BackLink)
-  data/         levels list
-  pages/        Home + Level1 (animated hero) + LevelPage (generic level shell)
-  scenes/       R3F 3D scenes (add as you reach Level 6)
-  lib/          utils
-```
+The build script runs TypeScript checking before the Vite build.
 
-## Levels
-- **/level1** — Reveal & counters (letter-by-letter headline + rolling numbers)
-- **/level2** — Scroll storytelling (Lenis)
-- **/level3** — Micro-interactions
-- **/level4** — GSAP timelines
-- **/level5** — Page transitions
-- **/level6** — 3D with React Three Fiber
-- **/level7** — The showcase
+## Project layout
 
-Each `/levelN` route currently renders a placeholder canvas — replace it with that
-level's quest output as you work through the course.
+- `src/App.tsx` — lazy-loaded routes and fallback handling.
+- `src/pages/` — home page and level implementations.
+- `src/components/` — reusable animation and interface components.
+- `src/animations/` — smooth-scroll hook.
+- `src/scenes/` — 3D scene.
+- `src/data/levels.ts` — level metadata.
+
+## Status and limitations
+
+This is a learning/demo project, not a client delivery. Numbers shown in demonstration UI, such as Lighthouse scores and frame rates, should not be treated as measured results. Browser behaviour, accessibility and performance still require testing before making portfolio claims.
+
+A Vercel configuration is included; deployment availability has not been verified.

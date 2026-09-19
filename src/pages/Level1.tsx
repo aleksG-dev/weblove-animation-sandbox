@@ -4,9 +4,9 @@ import { AnimatedHeadline } from '../components/AnimatedHeadline';
 import { RollingNumber } from '../components/RollingNumber';
 
 const stats = [
-  { value: 98, suffix: '', label: 'Lighthouse score' },
-  { value: 60, suffix: 'fps', label: 'Buttery animation' },
-  { value: 7, suffix: '', label: 'Levels to master' },
+  { value: 98, suffix: '', label: 'Example counter' },
+  { value: 60, suffix: '', label: 'Demo value' },
+  { value: 7, suffix: '', label: 'Animation levels' },
 ];
 
 export function Level1() {

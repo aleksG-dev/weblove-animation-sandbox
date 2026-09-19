@@ -57,9 +57,9 @@ export function Level7() {
         </Reveal>
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
           {[
-            { v: 7, s: '', label: 'Levels shipped' },
-            { v: 6, s: '', label: 'Animation libraries' },
-            { v: 100, s: '%', label: 'Reduced-motion safe' },
+            { v: 7, s: '', label: 'Animation levels' },
+            { v: 3, s: '', label: 'Demo counters' },
+            { v: 100, s: '%', label: 'Example percentage' },
           ].map((stat, i) => (
             <Reveal key={stat.label} delay={i * 0.1}>
               <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
